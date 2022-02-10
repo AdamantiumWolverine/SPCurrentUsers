@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Control ControlAssembly="SPCurrentUsers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=55ce97ca144856f2"
+           ControlClass="SPCurrentUsers.SPCurrentUsersDelegateControl"
+           Id="AdditionalPageHead"
+           Sequence="10">
+  </Control>
+</Elements>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="SPCurrentUsersLists" Description="Sets up the SPCurrentUsersUserTracker list." Id="e90b462d-b808-44c5-b7b4-e39c6a4cce8f" ReceiverAssembly="SPCurrentUsers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=55ce97ca144856f2" ReceiverClass="SPCurrentUsers.SPCurrentUsersLists" Scope="Site">
+  <ActivationDependencies>
+    <ActivationDependency FeatureDescription="Configures the Site User Information List to start tracking last login and last url data and activates all the SPCurrentUser features." FeatureId="5e92e6ec-83e2-415c-934d-d1a89e4104ad" FeatureTitle="SPCurrentUsersSetup" />
+  </ActivationDependencies>
+  <ElementManifests>
+    <ElementManifest Location="SPCurrentUsersLists\Elements.xml" />
+  </ElementManifests>
+</Feature>

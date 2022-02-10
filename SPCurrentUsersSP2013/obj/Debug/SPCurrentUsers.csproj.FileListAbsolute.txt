@@ -1,0 +1,5 @@
+C:\Projects\SPCurrentUsersSP2013\SPCurrentUsersSP2013\bin\Debug\SPCurrentUsers.dll
+C:\Projects\SPCurrentUsersSP2013\SPCurrentUsersSP2013\bin\Debug\SPCurrentUsers.pdb
+C:\Projects\SPCurrentUsersSP2013\SPCurrentUsersSP2013\obj\Debug\SPCurrentUsers.dll
+C:\Projects\SPCurrentUsersSP2013\SPCurrentUsersSP2013\obj\Debug\SPCurrentUsers.pdb
+C:\Projects\SPCurrentUsersSP2013\SPCurrentUsersSP2013\obj\Debug\SPCurrentUsers.csprojResolveAssemblyReference.cache

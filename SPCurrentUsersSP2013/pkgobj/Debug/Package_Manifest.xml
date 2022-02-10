@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="f0df2c83-a05d-46e4-a910-0dcceed4a371" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="SPCurrentUsers.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="SPCurrentUsers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=55ce97ca144856f2" Namespace="SPCurrentUsers" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\custom\SPCurrentUsers\Web.config" />
+    <TemplateFile Location="Layouts\custom\SPCurrentUsers\DeleteOldEntries.aspx.cs" />
+    <TemplateFile Location="Layouts\custom\SPCurrentUsers\WebAppStats.aspx.cs" />
+    <TemplateFile Location="Layouts\custom\SPCurrentUsers\DeleteOldEntries.aspx" />
+    <TemplateFile Location="Layouts\custom\SPCurrentUsers\WebAppStats.aspx" />
+    <TemplateFile Location="Layouts\SPCurrentUsersAdministration.aspx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="SPCurrentUsersSetup\Feature.xml" />
+    <FeatureManifest Location="SPCurrentUsersLists\Feature.xml" />
+    <FeatureManifest Location="SPCurrentUsersAdministration\Feature.xml" />
+    <FeatureManifest Location="SPCurrentUsersDelegateControl\Feature.xml" />
+  </FeatureManifests>
+</Solution>

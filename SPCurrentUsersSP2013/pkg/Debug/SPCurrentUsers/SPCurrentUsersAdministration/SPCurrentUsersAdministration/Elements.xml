@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="CurrentUsers"
+                GroupId="UsersAndPermissions"
+                Sequence="22"
+                Location="Microsoft.SharePoint.SiteSettings"
+                Rights="ManageWeb"
+                Title="Current users"
+                >
+    <UrlAction Url="_layouts/SPCurrentUsersAdministration.aspx"/>
+  </CustomAction>
+  <CustomAction Id="SiteSettingsCurrentUsers"
+                ControlAssembly="SPCurrentUsers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=55ce97ca144856f2"
+                ControlClass="SPCurrentUsers.SPCurrentUsersSiteSettingsControl"
+                GroupId="SiteActions"
+                Location="Microsoft.SharePoint.StandardMenu"
+                Sequence="400"
+                Rights="ManageWeb"/>
+</Elements>

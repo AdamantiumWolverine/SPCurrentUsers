@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9520863-8122-455D-8264-1FE5EC067E2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SPCurrentUsers</RootNamespace>
+    <AssemblyName>SPCurrentUsers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>SPCurrentUsers.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FeatureElements\SPCurrentUsersAdministration\Elements.xml" />
+    <Content Include="FeatureElements\SPCurrentUsersDelegateControl\Elements.xml" />
+    <Content Include="FeatureElements\SPCurrentUsersLists\Elements.xml" />
+    <Content Include="Features\SPCurrentUsersDelegateControl\SPCurrentUsersDelegateControl.Template.xml">
+      <DependentUpon>SPCurrentUsersDelegateControl.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SPCurrentUsersAdministration\SPCurrentUsersAdministration.Template.xml">
+      <DependentUpon>SPCurrentUsersAdministration.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SPCurrentUsersSetup\SPCurrentUsersSetup.Template.xml">
+      <DependentUpon>SPCurrentUsersSetup.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\SPCurrentUsersLists\SPCurrentUsersLists.Template.xml">
+      <DependentUpon>SPCurrentUsersLists.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\custom\SPCurrentUsers\DeleteOldEntries.aspx.cs">
+      <DependentUpon>DeleteOldEntries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\custom\SPCurrentUsers\WebAppStats.aspx.cs">
+      <DependentUpon>WebAppStats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Compile Include="FeatureCode\SPCurrentUsersAdministration.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeatureCode\SPCurrentUsersDelegateControl.cs" />
+    <Compile Include="FeatureCode\SPCurrentUsersHelper.cs" />
+    <Compile Include="FeatureCode\SPCurrentUsersLists.cs" />
+    <Compile Include="FeatureCode\SPCurrentUsersSetup.cs" />
+    <Compile Include="FeatureCode\SPCurrentUsersSiteSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FeatureElements\SPCurrentUsersAdministration\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{90ba6d8d-6450-448d-9d5f-2ec799821ec1}</SharePointProjectItemId>
+    </None>
+    <None Include="FeatureElements\SPCurrentUsersDelegateControl\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{da65cc48-ecf9-40a7-86e4-86c76a417afd}</SharePointProjectItemId>
+    </None>
+    <None Include="FeatureElements\SPCurrentUsersLists\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0784d2e5-aa69-4204-9324-77336afa032e}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\SPCurrentUsersDelegateControl\SPCurrentUsersDelegateControl.feature">
+      <FeatureId>{dda17f01-5499-44fb-8693-cbd3413148bb}</FeatureId>
+    </None>
+    <None Include="Features\SPCurrentUsersAdministration\SPCurrentUsersAdministration.feature">
+      <FeatureId>{42488b30-9453-4dcd-b9c4-12fbae254461}</FeatureId>
+    </None>
+    <None Include="Features\SPCurrentUsersSetup\SPCurrentUsersSetup.feature">
+      <FeatureId>{44dfb92e-558a-4456-8fe4-e89cbd4c8e03}</FeatureId>
+    </None>
+    <None Include="Features\SPCurrentUsersLists\SPCurrentUsersLists.feature">
+      <FeatureId>{ad8b283d-174f-4c46-8b49-4f16313717e0}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\custom\SPCurrentUsers\Web.config" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{94cbd03b-073c-44e5-8625-953f0e037e10}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{b62faa4c-747a-43be-9631-37cee3ad0f82}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="SPCurrentUsers.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Layouts\custom\SPCurrentUsers\DeleteOldEntries.aspx" />
+    <Content Include="Layouts\custom\SPCurrentUsers\WebAppStats.aspx" />
+    <Content Include="Layouts\SPCurrentUsersAdministration.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>
