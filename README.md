@@ -3,7 +3,7 @@ Farm Solution Package for SharePoint to display current users.
 
 This is the improved version of the SPCurrentUsers based on the blog that was at http://blog.furuknap.net/find-number-of-users-currently-logged-on-to-a-sharepoint-site and was shared on https://SPCurrentUsers.codeplex.com.   
 
-The blog version had a tutorial on how you would build solution package for displaying the current users.  Unfortunately, the version in the blog was a inefficient and the implementation from the blog was not meant for production environments.
+The blog version had a tutorial on how you would build a solution package for displaying the current users.  Unfortunately, the version in the blog was a inefficient and the implementation from the blog was not meant for production environments.
 
 Some of the issues, as I recall, were that the count of current users was placed into the Site Settings menu.  This meant that every access to a page on the site would also count all the current users.   Next, the version from the blog allowed you to set the session timeouts for each page, and therefore required a query of all users that logged in, and then a query of all page session timeouts, and then a count of logged in users based off the page being accessed.  This version uses a single session timeout significantly reducing the number of queries and amount of time required to establish the current user count.
 
