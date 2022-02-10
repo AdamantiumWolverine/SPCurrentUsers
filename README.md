@@ -23,7 +23,7 @@ PowerShell Add and Install Solution Commands:
    Install-SPSolution -Identity SPCurrentUsers.wsp -GACDeployment -force -CompatibilityLevel {All} -AllWebApplications
    
    
-Once installed, you will be able to go to Site Settings -> Site Collection Features, and enable the SPCurrentUsers Setup Feature to activate the features that create the SPCurrentUsersUserTracker list and add the controls to track current logins.
+Once installed, you will be able to go to Site Settings -> Site Collection Features, and enable the SPCurrentUsers Setup Feature to activate the features that create the SPCurrentUsersUserTracker list and adds the control to track current logins.
 
 The tool will add a link to the SPCurrentUsers Admin page from the Site Settings menu for users who are admins on the site.
 
