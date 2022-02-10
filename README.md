@@ -28,7 +28,8 @@ Once installed, you will be able to go to Site Settings -> Site Collection Featu
 The tool will add a link to the SPCurrentUsers Admin page from the Site Settings menu for users who are admins on the site.
 
 
-If you want to clear out the SPCurrentUsersUserTracker list as it has gotten too many entries over the years, you can deactivate all the SPCurrentUsers Features, then go to your site collection's /lists/SPCurrentUsersUserTracker list -> List Settings  and delete the list.  Then, reactivate the SPCurrentUsers Setup feature to recreate the list.
+The tool comes with some clean up web pages to clear out old entries in the SPCurrentUsersUserTracker list.  
+However, if you want to completely clear out the SPCurrentUsersUserTracker list as it has gotten too many entries over the years, you can deactivate all the SPCurrentUsers Features, then go to your site collection's /lists/SPCurrentUsersUserTracker list -> List Settings  and delete the list.  Then, reactivate the SPCurrentUsers Setup feature to recreate the list.
 
 
 
